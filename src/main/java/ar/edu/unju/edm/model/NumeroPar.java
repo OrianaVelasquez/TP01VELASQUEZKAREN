@@ -4,69 +4,36 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NumeroPar {
-	 private int num1;
-	 private int num2;
-	 private int num3;
-	 private int num4;
-	 private int num5;
-
-	 public NumeroPar() {
+	public NumeroPar(){
 		 // TODO Auto-generated constructor stub
-     }
-     /*public NumeroPar (int num1) {
-    	 super ();
-    	 this.num1=num1;
-     }*/
-     public int getNum1() {
-		return num1;
+}
+	private int numero1;
+	
+	public NumeroPar(int numero1) {
+		
+		this.numero1=numero1;
 	}
-	public void setNum1(int num1) {
-		this.num1 = num1;
+
+	public int getNumero1() {
+		return numero1;
 	}
-	public int getNum2() {
-		return num2;
-	}
-	public void setNum2(int num2) {
-		this.num2 = num2;
-	}
-	public int getNum3() {
-		return num3;
-	}
-	public void setNum3(int num3) {
-		this.num3 = num3;
-	}
-	public int getNum4() {
-		return num4;
-	}
-	public void setNum4(int num4) {
-		this.num4 = num4;
-	}
-	public int getNum5() {
-		return num5;
-	}
-	public void setNum5(int num5) {
-		this.num5 = num5;
+
+	public void setNumero1(int numero1) {
+		this.numero1 = numero1;
 	}
 	
-	
-	public String CalculoPar() {
-    	 String par;
-    	 if(this.num1 % 2 == 0){
-    		 par= "es año par";
-    	 }else {
-    		 if (this.num2 % 2==0) {
-    			 par ="es par";
-    		 }else {
-    			 if (this.num3 % 2 ==0) {
-    				 par="es par";
-    			 }else {
-    				 if (this.num4 % 2 ==0) {
-    					 par="es par";
-    			 }else {
-    				 par="no es par";
-    				 }
-    			 }
-              }
-    	 }
-    	 return par;
-}}
+	public String numeroPar() {
+		
+		if(this.numero1%2==0) {
+			
+			return "Es par";
+		}
+		else {
+			return "No es par";
+		}
+		
+		
+	}
+
+}
+
