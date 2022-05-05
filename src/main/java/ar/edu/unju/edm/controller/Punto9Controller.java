@@ -9,14 +9,14 @@ import ar.edu.unju.edm.model.Punto9;
 
 public class Punto9Controller {
 	@Autowired
-	Punto9 punto9;
+	Punto9 Punto9;
 	@GetMapping("/calculoRestante1")
-	public ModelAndView getRestante1 (@RequestParam (name= "num1") String numero) {
-		punto9.setNumero1(Integer.valueOf(numero));
-		String resultadoRestante1=punto9.restante1();
+	public ModelAndView getRestante1 (@RequestParam (name= "num1") String num1) {
+		Punto9.setNumero1(Integer.valueOf(num1));
+		String resultadoRestante1=Punto9.restante1();
 		ModelAndView modelView = new ModelAndView("punto9");
-		modelView.addObject("resultado9",resultadoRestante1);
-		modelView.addObject("numero",numero);
+		modelView.addObject("Punto9",resultadoRestante1);
+		modelView.addObject("numero",num1);
 		return modelView;
 		
 	}

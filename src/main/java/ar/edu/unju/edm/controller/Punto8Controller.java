@@ -8,12 +8,12 @@ import ar.edu.unju.edm.model.Multiplos;
 
 public class Punto8Controller {
 	@GetMapping("/calculoMultiplos")
-	public ModelAndView getMultiplo1 (@RequestParam (name= "num1") String numero) {
+	public ModelAndView getMultiplo1 (@RequestParam (name= "numero") String numero) {
 		Multiplos multiplos = new Multiplos();
 		multiplos.setNumero1(Integer.valueOf(numero));
 		String resultadoMultiplos = new String();
-		ModelAndView modelView = new ModelAndView("punto8");
-		modelView.addObject("resultadoMultiplos",resultadoMultiplos);
+		ModelAndView modelView = new ModelAndView("Multiplos");
+		modelView.addObject("Multiplos",resultadoMultiplos);
 		modelView.addObject("numero",numero);
 		return modelView;
 		

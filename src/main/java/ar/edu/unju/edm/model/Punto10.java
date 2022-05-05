@@ -5,35 +5,35 @@ import org.springframework.stereotype.Component;
 @Component
 public class Punto10 {
 	
-   private int numero1;
+   private int number;
    
    public Punto10() {
 	   
 	   
    }
    
-   public Punto10(int numero1) {
+   public Punto10(int number) {
 	   super();
-	   this.numero1=numero1;
+	   this.number=number;
 	   
    }
 
 public int getNumero1() {
-	return numero1;
+	return number;
 }
 
-public void setNumero1(int numero1) {
-	this.numero1 = numero1;
+public void setNumero1(int number) {
+	this.number = number;
 }
    
    public String restante2() {
 	   String resultadoString= "";
 	   int resultadoInteger=1;
 	   int restante=20;
-	   this.numero1=this.numero1+20;
-	   while (this.numero1!=160) {
-		   resultadoInteger=this.numero1 - restante ;
-		   this.numero1=resultadoInteger;
+	   this.number=this.number+20;
+	   while (this.number!=160) {
+		   resultadoInteger=this.number - restante ;
+		   this.number=resultadoInteger;
 		   resultadoString = resultadoString + Integer.toString(resultadoInteger) + " - ";
 	   }
 	   return resultadoString;

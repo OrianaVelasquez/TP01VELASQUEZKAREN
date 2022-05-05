@@ -11,11 +11,11 @@ public class Punto12Controller {
 	@Autowired
 	Punto12 punto12;
 	@GetMapping("/calculoPunto12")
-	public ModelAndView getPunto12 (@RequestParam (name= "num1") String numero) {
+	public ModelAndView getPunto12 (@RequestParam (name= "numero") String numero) {
 		punto12.setNumero1(Integer.valueOf(numero));
 		String resultadoPunto12=punto12.calculoCaida();
 		ModelAndView modelView = new ModelAndView("punto12");
-		modelView.addObject("resultado12",resultadoPunto12);
+		modelView.addObject("Punto12",resultadoPunto12);
 		modelView.addObject("numero",numero);
 		return modelView;
 		

@@ -6,37 +6,37 @@ import org.springframework.stereotype.Component;
 @Component
 public class Nota{
 	
-	private int numero1;
+	private int N1;
 	
 	public Nota() {}
 	
-	public Nota(int numero1) {
+	public Nota(int N1) {
 		
-		this.numero1=numero1;
+		this.N1=N1;
 		
 	}
 
 	public int getNumero1() {
-		return numero1;
+		return N1;
 	}
 
-	public void setNumero1(int numero1) {
-		this.numero1 = numero1;
+	public void setNumero1(int N1) {
+		this.N1 = N1;
 	}
 	
 	
 	public String Calificacion() {
 		
-		if (this.numero1==6) {
+		if (this.N1==6) {
 			
 			return "Alumno regulariza";
 		}
-		else if (this.numero1>=7 && this.numero1<=10) {
+		else if (this.N1>=7 && this.N1<=10) {
 			
 			return "El alumno promociona";
 			
 		}
-		else if (this.numero1<6 && this.numero1>=1) {
+		else if (this.N1<6 && this.N1>=1) {
 			
 			return "el alumno desaprueba";
 		}

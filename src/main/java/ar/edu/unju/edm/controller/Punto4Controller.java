@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ar.edu.unju.edm.model.Mes1;
 
 public class Punto4Controller {
-	@GetMapping("/Mes")
+	@GetMapping("/Mes?")
 	public String getmespage(@RequestParam (name ="num") int num, Model model) {
 		String resultadoM;
 		Mes1 nuevoMes=new Mes1();

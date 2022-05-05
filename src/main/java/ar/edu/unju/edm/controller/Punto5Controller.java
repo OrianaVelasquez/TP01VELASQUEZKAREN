@@ -8,10 +8,10 @@ import ar.edu.unju.edm.model.Mes2;
 
 public class Punto5Controller {
 	@GetMapping("/calculoMes2")
-    public String getMes2(@RequestParam(name="numero1")int numero1,Model model) {
+    public String getMes2(@RequestParam(name="number")int number,Model model) {
 		String resultadoM2;
 		Mes2 nuevoMes2=new Mes2();
-		nuevoMes2.setNumero1(numero1);
+		nuevoMes2.setNumero1(number);
     	resultadoM2=nuevoMes2.CalculoMes2();
     	model.addAttribute("resultadoM2", resultadoM2);
 		return "Mes2";

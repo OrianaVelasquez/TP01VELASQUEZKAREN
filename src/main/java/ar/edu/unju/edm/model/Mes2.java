@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class Mes2 {
 
 
-private int numero1;
+private int number;
 	
 	
 	public Mes2() {
@@ -14,22 +14,22 @@ private int numero1;
 
 	}
 	
-	public Mes2(int numero1) {
+	public Mes2(int number) {
 		
-		this.numero1=numero1;
+		this.number=number;
 	}
 
 	public int getNumero1() {
-		return numero1;
+		return number;
 	}
 
-	public void setNumero1(int numero1) {
-		this.numero1 = numero1;
+	public void setNumero1(int number) {
+		this.number = number;
 	}
 	
 	public String CalculoMes2() {
 		
-		switch(this.numero1) {
+		switch(this.number) {
 		case 1: return "El dato ingresado es un mes";
 		case 2: return "El dato ingresado es un mes";
 		case 3: return "El dato ingresado es un mes";
