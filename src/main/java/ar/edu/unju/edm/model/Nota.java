@@ -4,50 +4,30 @@ package ar.edu.unju.edm.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Nota{
-	
-	private int N1;
-	
-	public Nota() {}
-	
-	public Nota(int N1) {
-		
-		this.N1=N1;
-		
+public class Nota {
+	  int nu;
+	  public void setNu(int nu) {
+	    this.nu = nu;
+	  }
+	  public int getNu() {
+	    return nu;
+	  }
+	  public String nota(){
+	    String resultado;
+	    if(nu==6){
+	      resultado="Alumno regulariza";
+	    }else{
+	      if(nu>=7 && nu<=10){
+	        resultado="El alumno promociona";
+	      }else{
+	        if(nu<6 && nu>=1){
+	          resultado ="El alumno desaprueba";
+	        }else{
+	            resultado="valor no permitido";
+	        }
+	      }
+	    }
+	    return resultado;
+	  }
+
 	}
-
-	public int getNumero1() {
-		return N1;
-	}
-
-	public void setNumero1(int N1) {
-		this.N1 = N1;
-	}
-	
-	
-	public String Calificacion() {
-		
-		if (this.N1==6) {
-			
-			return "Alumno regulariza";
-		}
-		else if (this.N1>=7 && this.N1<=10) {
-			
-			return "El alumno promociona";
-			
-		}
-		else if (this.N1<6 && this.N1>=1) {
-			
-			return "el alumno desaprueba";
-		}
-		
-		else {
-			return "Valor ingresado no permitido";
-		}
-			
-			
-		}	
-
-	
-
-}

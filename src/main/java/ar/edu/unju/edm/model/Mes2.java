@@ -1,51 +1,56 @@
 package ar.edu.unju.edm.model;
-
-import org.springframework.stereotype.Component;
-
-@Component
 public class Mes2 {
+  int n;
+  public int getN() {
+	return n;
+}
+public void setN(int n) {
+	this.n = n;
+}
 
-
-private int number;
-	
-	
-	public Mes2() {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public Mes2(int number) {
-		
-		this.number=number;
-	}
-
-	public int getNumero1() {
-		return number;
-	}
-
-	public void setNumero1(int number) {
-		this.number = number;
-	}
-	
-	public String CalculoMes2() {
-		
-		switch(this.number) {
-		case 1: return "El dato ingresado es un mes";
-		case 2: return "El dato ingresado es un mes";
-		case 3: return "El dato ingresado es un mes";
-		case 4: return "El dato ingresado es un mes";
-		case 5: return "El dato ingresado es un mes";
-		case 6: return "El dato ingresado es un mes";
-		case 7: return "El dato ingresado es un mes";
-		case 8: return "El dato ingresado es un mes";
-		case 9: return "El dato ingresado es un mes";
-		case 10: return "El dato ingresado es un mes";
-		case 11: return "El dato ingresado es un mes";
-		case 12: return "El dato ingresado es un mes";
-		default:return"No pertenece a un mes";
-		
-		
-		}
-	}	
-
+  public String ME(){
+    String aux;
+    switch(n){
+      case 1:
+      aux="Enero";
+      break;
+      case 2:
+      aux="Febrero";
+      break;
+      case 3:
+      aux="Marzo";
+      break;
+      case 4:
+      aux="Abril";
+      break;
+      case 5:
+      aux="Mayo";
+      break;
+      case 6:
+      aux="Junio";
+      break;
+      case 7:
+      aux="Julio";
+      break;
+      case 8:
+      aux="Agosto";
+      break;
+      case 9:
+      aux="Septiembre";
+      break;
+      case 10:
+      aux="Octubre";
+      break;
+      case 11:
+      aux="Noviembre";
+      break;
+      case 12:
+      aux="Diciembre";
+      break;
+      default:
+      aux="No existe ese mes";
+      break;
+    }                  
+    return aux;
+  }
 }

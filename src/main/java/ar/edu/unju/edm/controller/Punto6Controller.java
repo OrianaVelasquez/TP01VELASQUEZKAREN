@@ -1,19 +1,19 @@
 package ar.edu.unju.edm.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import ar.edu.unju.edm.model.Nota;
-
+@Controller
 public class Punto6Controller {
-	  @GetMapping("/nota")
-	  public String getnotaPage(@RequestParam (name = "N1") int N1,Model model){
+	@GetMapping("/Nota")
+	  public String getnotaPage(@RequestParam (name = "nu") int num,Model model){
 	    String[] Aux1= new String[8];
-	    Nota nota = new Nota();
+	    Nota nnota = new Nota();
 			for(int i=0;i<8;i++){
-				nota.setNumero1(N1);
-				Aux1[i] = nota.Calificacion();
+				nnota.setNu(num);
+				Aux1[i] = nnota.nota();
 	      model.addAttribute("nota1", Aux1[0]);
 	      model.addAttribute("nota2", Aux1[1]);
 	      model.addAttribute("nota3", Aux1[2]);
@@ -22,7 +22,7 @@ public class Punto6Controller {
 	      model.addAttribute("nota6", Aux1[5]);
 	      model.addAttribute("nota7", Aux1[6]);
 	      model.addAttribute("nota8", Aux1[7]);
-	      N1--;
+				num--;
 			}
 	    return "Nota6";
 	  }

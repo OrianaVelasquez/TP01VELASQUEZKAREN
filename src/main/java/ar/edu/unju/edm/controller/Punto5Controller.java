@@ -1,20 +1,21 @@
 package ar.edu.unju.edm.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ar.edu.unju.edm.model.Mes2;
+@Controller 
 
 public class Punto5Controller {
-	@GetMapping("/calculoMes2")
-    public String getMes2(@RequestParam(name="number")int number,Model model) {
-		String resultadoM2;
-		Mes2 nuevoMes2=new Mes2();
-		nuevoMes2.setNumero1(number);
-    	resultadoM2=nuevoMes2.CalculoMes2();
-    	model.addAttribute("resultadoM2", resultadoM2);
-		return "Mes2";
-   
-	}
+	  @GetMapping("/Mes2")
+	  public String getmes2Page(@RequestParam (name = "n") int num,Model model){
+	    String aux;
+	    Mes2 mmes2 = new Mes2();
+	    mmes2.setN(num);
+			aux = mmes2.ME();
+	    model.addAttribute("mes2", aux);
+	    return "Mes2";
+	  }
 }

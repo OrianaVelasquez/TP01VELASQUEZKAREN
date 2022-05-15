@@ -1,23 +1,20 @@
 package ar.edu.unju.edm.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unju.edm.model.Punto9;
-
+@Controller
 public class Punto9Controller {
-	@Autowired
-	Punto9 Punto9;
-	@GetMapping("/calculoRestante1")
-	public ModelAndView getRestante1 (@RequestParam (name= "num1") String num1) {
-		Punto9.setNumero1(Integer.valueOf(num1));
-		String resultadoRestante1=Punto9.restante1();
-		ModelAndView modelView = new ModelAndView("punto9");
-		modelView.addObject("Punto9",resultadoRestante1);
-		modelView.addObject("numero",num1);
-		return modelView;
-		
-	}
+	@GetMapping("/secuencia2")
+	  public String getsecu3Page(@RequestParam (name = "num") int num,Model model){
+	    String Aux;
+	    Punto9 secu2 = new Punto9();
+	    secu2.setNum(num);
+	    Aux = secu2.secuencia2();
+	    model.addAttribute("secu2", Aux);
+	    return "Punto9";
+	  }
 }
